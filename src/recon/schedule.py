@@ -78,7 +78,7 @@ def tick(cfg: Config) -> str:
         )
         return f"{period}: failed (attempt {attempts}{', gave up' if gave_up else ''})"
 
-    status = "ok" if res.proof_ok else "incomplete"
+    status = "ok" if res.complete else "incomplete"
     state[period] = {
         "inputs": inputs,
         "status": status,

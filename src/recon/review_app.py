@@ -60,9 +60,13 @@ for it in items:
         )
         note = st.text_input("Note (optional)", key=f"n-{it['item_id']}")
         if st.button("Save decision", key=f"b-{it['item_id']}", disabled=not reviewer.strip() or not value.strip()):
-            pipeline.save_resolution(cfg, period, it["item_id"], value.strip(), reviewer.strip(), note.strip())
-            st.success(f"Saved: {value}")
-            st.rerun()
+            try:
+                pipeline.save_resolution(cfg, period, it["item_id"], value.strip(), reviewer.strip(), note.strip())
+            except ValueError as exc:
+                st.error(str(exc))
+            else:
+                st.success(f"Saved: {value}")
+                st.rerun()
 
 if done:
     st.divider()

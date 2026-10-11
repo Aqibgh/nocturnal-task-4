@@ -9,13 +9,14 @@ from __future__ import annotations
 
 import csv
 from collections import Counter, defaultdict
+from contextlib import suppress
 from dataclasses import dataclass, field
 from pathlib import Path
 
 from .config import Config
 from .extract import PageResult
 from .models import OUTCOMES, SOURCES, Group, SourceRow
-from .sources import canon_unit, page_number, read_sheet, to_number
+from .sources import canon_unit, page_number, read_sheet, to_number, validate_resolution
 
 Totals = dict[str, dict[str, float]]  # source -> unit -> quantity
 
@@ -82,6 +83,9 @@ def build(
     ledger_rows = {s: sum(by_outcome[s].values()) for s in SOURCES}
 
     failures = _each_row_once(ledger, all_rows) + _ties(inputs, ledger_rows, ledger_totals)
+    for page in pages:
+        if page.passes and any(len(p.rows) != len(page.passes[0].rows) for p in page.passes[1:]):
+            failures.append(f"{page.page}: extraction row counts disagree; row coverage is not established")
     return Proof(
         ledger=ledger,
         input_rows=inputs.rows,
@@ -154,6 +158,11 @@ def _register_cells(pages: list[PageResult], resolutions: dict[str, dict]) -> li
     for p in (p for p in pages if p.passes):
         for xr in p.passes[0].rows:
             base = f"reg:p{page_number(p)}:r{xr.row_index:02d}"
-            qty = resolutions.get(f"{base}:qty", {}).get("value", xr.qty.value)
-            out.append((qty, resolutions.get(f"{base}:unit", {}).get("value", xr.unit.value)))
+            values = {}
+            for name in ("qty", "unit"):
+                values[name] = getattr(xr, name).value
+                if decision := resolutions.get(f"{base}:{name}"):
+                    with suppress(ValueError):  # invalid saved decisions use the original cell
+                        values[name] = validate_resolution(name, decision.get("value"))
+            out.append((values["qty"], values["unit"]))
     return out

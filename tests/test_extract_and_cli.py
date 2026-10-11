@@ -97,3 +97,16 @@ def test_cli_alerts_and_fails_on_crash(root, monkeypatch, capsys):
     with pytest.raises(RuntimeError):
         cli.main(["run"])
     assert "run FAILED" in capsys.readouterr().out
+
+
+def test_cli_missing_source_exits_incomplete_even_when_ledger_ties(root, capsys):
+    (root / "data" / "2026-09" / "erp_grn.csv").unlink()
+    assert cli.main(["run", "--no-send"]) == 2
+    text = capsys.readouterr().out
+    assert "proof TIES" in text
+    assert "run INCOMPLETE" in text
+
+
+def test_cli_extraction_disagreement_exits_incomplete(root, disagreeing_extraction, capsys):
+    assert cli.main(["run", "--no-send"]) == 2
+    assert "run INCOMPLETE" in capsys.readouterr().out

@@ -24,6 +24,7 @@ class RunResult:
     review_count: int
     out_dir: Path
     delivery: str
+    complete: bool
 
 
 # ---------------------------------------------------------------- review decisions
@@ -41,6 +42,7 @@ def load_resolutions(cfg: Config, period: str) -> dict[str, dict]:
 def save_resolution(cfg: Config, period: str, item_id: str, value: str, by: str, note: str = "") -> None:
     if not by.strip():
         raise ValueError("a resolution needs the reviewer's name")
+    value = sources.validate_resolution(item_id.rsplit(":", 1)[-1], value)
     res = load_resolutions(cfg, period)
     res[item_id] = {"value": value, "by": by, "note": note, "at": cfg.now.isoformat()}
     p = resolutions_path(cfg, period)
@@ -108,10 +110,11 @@ def run(cfg: Config, period: str | None = None, send: bool = True) -> RunResult:
         "run.done",
         run=run_id,
         proof_ok=pf.ok,
+        complete=data.complete,
         review_items=review_count,
         outcomes={o: len(data.of(o)) for o in OUTCOMES},
         gaps=gaps,
         failures=pf.failures,
     )
     delivery = notify.send(cfg, period, message, run_id) if send else "not sent (--no-send)"
-    return RunResult(run_id, period, message, pf.ok, review_count, out, delivery)
+    return RunResult(run_id, period, message, pf.ok, review_count, out, delivery, data.complete)

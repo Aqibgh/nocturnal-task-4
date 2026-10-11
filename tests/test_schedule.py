@@ -1,5 +1,6 @@
 """Monthly scheduler: runs once when due, reruns only on changed inputs, retries then gives up."""
 
+import json
 import shutil
 from dataclasses import replace
 from datetime import datetime
@@ -62,3 +63,16 @@ def test_crash_alerts_retries_then_gives_up(cfg, monkeypatch, capsys):
     assert "gave up" in schedule.tick(cfg)
     assert "up to date (failed)" in schedule.tick(cfg)  # no endless alerts
     assert capsys.readouterr().out.count("run FAILED") == 3
+
+
+def test_missing_source_is_recorded_as_incomplete(cfg):
+    (cfg.data_dir / "2026-09" / "erp_grn.csv").unlink()
+    assert "incomplete" in schedule.tick(cfg)
+    saved = json.loads((cfg.state_dir / "schedule.json").read_text())
+    assert saved["2026-09"]["status"] == "incomplete"
+
+
+def test_extraction_disagreement_is_recorded_as_incomplete(cfg, disagreeing_extraction):
+    assert "incomplete" in schedule.tick(cfg)
+    saved = json.loads((cfg.state_dir / "schedule.json").read_text())
+    assert saved["2026-09"]["status"] == "incomplete"

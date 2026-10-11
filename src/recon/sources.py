@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import calendar
 import csv
+import math
 import re
 from datetime import date, datetime, timedelta
 from difflib import SequenceMatcher
@@ -45,6 +46,19 @@ def to_number(value: Any) -> float | None:
 
 def canon_unit(cfg: Config, raw: Any) -> str | None:
     return cfg.unit_aliases.get(str(raw or "").strip().lower())
+
+
+def validate_resolution(field: str, value: Any) -> str:
+    if field not in REGISTER_FIELDS:
+        raise ValueError("unknown review field")
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError("a decision needs a non-empty value")
+    value = value.strip()
+    if field == "qty":
+        quantity = to_number(value)
+        if quantity is None or not math.isfinite(quantity) or quantity <= 0:
+            raise ValueError("quantity must be a finite number above zero")
+    return value
 
 
 def item_key(text: str | None) -> str | None:
@@ -286,9 +300,13 @@ def _register_row(cfg: Config, page: PageResult, idx: int, period: str, resoluti
     for f in REGISTER_FIELDS:
         resolution = resolutions.get(f"{row.row_id}:{f}")
         if resolution:
-            row.resolved[f] = resolution
-            cells[f] = resolution["value"]
-            continue
+            try:
+                cells[f] = validate_resolution(f, resolution.get("value"))
+            except ValueError as exc:
+                flag(row, f, f"saved decision is invalid: {exc}", getattr(xr, f).raw_text)
+            else:
+                row.resolved[f] = resolution
+                continue
         cell: Cell = getattr(xr, f)
         cells[f] = cell.value
         second_reads = {getattr(p.rows[idx], f).value for p in page.passes[1:] if idx < len(p.rows)}

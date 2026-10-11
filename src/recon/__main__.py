@@ -42,10 +42,11 @@ def _run(cfg: config.Config, period: str, args: argparse.Namespace) -> int:
         raise
     print(
         f"run {res.run_id}: proof {'TIES' if res.proof_ok else 'DOES NOT TIE'}, "
-        f"{res.review_count} item(s) for review, message {res.delivery}"
+        f"{res.review_count} item(s) for review, message {res.delivery}, "
+        f"run {'complete' if res.complete else 'INCOMPLETE'}"
     )
     print(f"report: {res.out_dir / 'report.md'}")
-    return 0 if res.proof_ok else 2
+    return 0 if res.complete else 2
 
 
 def _review(cfg: config.Config, period: str, _args: argparse.Namespace) -> int:
@@ -68,7 +69,7 @@ def _resolve(cfg: config.Config, period: str, args: argparse.Namespace) -> int:
         f"resolved {args.item_id} = {args.value!r}; re-run {res.run_id}: "
         f"{res.review_count} item(s) still open, message {res.delivery}"
     )
-    return 0
+    return 0 if res.complete else 2
 
 
 def _schedule(cfg: config.Config, _period: str, args: argparse.Namespace) -> int:

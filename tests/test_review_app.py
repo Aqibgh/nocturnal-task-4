@@ -31,6 +31,12 @@ def test_review_page_saves_a_decision(tmp_path, monkeypatch):
     assert sum(expander.label == "Full register page" for expander in at.expander) == 2
     at.sidebar.text_input[1].input("Test Reviewer").run()
     box = next(t for t in at.text_input if t.key == "v-reg:p2:r14:qty")
+    box.input("banana").run()
+    next(b for b in at.button if b.key == "b-reg:p2:r14:qty").click().run()
+    assert not at.exception
+    assert any("finite number above zero" in error.value for error in at.error)
+    assert pipeline.load_resolutions(config.load(), "2026-09") == {}
+    assert len(at.subheader) == 2
     box.input("250").run()
     next(b for b in at.button if b.key == "b-reg:p2:r14:qty").click().run()
     assert not at.exception

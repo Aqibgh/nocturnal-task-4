@@ -1,6 +1,7 @@
 """End-to-end tests on the real September data (cached extraction, no API calls)."""
 
 import csv
+import json
 import shutil
 from pathlib import Path
 
@@ -108,3 +109,40 @@ def test_missing_erp_export_still_reports(cfg, tmp_path):
     res = pipeline.run(cfg)
     assert "ERP export (erp_grn.csv) not received" in res.message
     assert res.proof_ok  # what did arrive is still fully accounted for
+    assert not res.complete
+
+
+@pytest.mark.parametrize("value", ["banana", "", "0", "-1", "NaN", "inf", "-inf", "1e309"])
+def test_invalid_quantity_does_not_save_or_remove_review(cfg, value):
+    pipeline.run(cfg, send=False)
+    with pytest.raises(ValueError):
+        pipeline.save_resolution(cfg, "2026-09", "reg:p2:r14:qty", value, by="Tester")
+    assert pipeline.load_resolutions(cfg, "2026-09") == {}
+    assert pipeline.run(cfg, send=False).review_count == 2
+    assert '"event": "review.resolved"' not in (cfg.state_dir / "audit.jsonl").read_text()
+
+
+def test_invalid_overwrite_preserves_previous_valid_decision(cfg):
+    pipeline.save_resolution(cfg, "2026-09", "reg:p2:r14:qty", "250", by="Tester")
+    with pytest.raises(ValueError):
+        pipeline.save_resolution(cfg, "2026-09", "reg:p2:r14:qty", "banana", by="Tester")
+    assert pipeline.load_resolutions(cfg, "2026-09")["reg:p2:r14:qty"]["value"] == "250"
+
+
+def test_legacy_invalid_decision_remains_in_review_and_totals_tie(cfg):
+    path = pipeline.resolutions_path(cfg, "2026-09")
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps({"reg:p2:r05:qty": {"value": "banana", "by": "Old reviewer"}}))
+    result = pipeline.run(cfg, send=False)
+    assert result.proof_ok
+    assert result.review_count == 2
+    review = json.loads((result.out_dir / "review.json").read_text())
+    assert "saved decision is invalid" in next(x["reason"] for x in review if x["grn"] == 4419)
+
+
+def test_extraction_row_count_disagreement_fails_completeness(cfg, disagreeing_extraction):
+    result = pipeline.run(cfg, send=False)
+    assert not result.proof_ok
+    assert not result.complete
+    assert "NOT COMPLETE" in result.message
+    assert "row coverage is not established" in result.message
