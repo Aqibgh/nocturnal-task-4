@@ -1,0 +1,11 @@
+.env
+.git
+out/
+state/
+**/__pycache__
+.pytest_cache
+output/
+.playwright-cli/
+.mypy_cache/
+.ruff_cache/
+.coverage

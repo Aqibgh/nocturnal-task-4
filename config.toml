@@ -1,0 +1,79 @@
+# Kestrel Industries - September register reconciliation.
+# Everything that a person might want to change lives here, not in code.
+
+# Scenario clock. "now" decides which month is reconciled (the previous month)
+# and stamps every report and audit entry. Override with RECON_NOW=... for replays.
+now = "2026-10-15T08:30:00+05:00"
+timezone = "Asia/Karachi"
+
+[paths]
+data = "data"            # data/<YYYY-MM>/{register/*.jpg, erp_grn.csv, store_sheet.xlsx}
+extractions = "extractions/live"
+state = "state"
+out = "out"
+
+[extraction]
+# "cached" never calls a model: it only uses extractions/<sha256>.json.
+# "anthropic" or "gemini" call the model for any page not in the cache (needs an API key in .env).
+provider = "gemini"
+anthropic_model = "claude-opus-5-5"   # or "claude-haiku-5-5" for a cheaper run
+gemini_model = "gemini-2.5-flash"
+passes = 2                    # independent reads per page; any disagreement goes to review
+min_confidence = 0.85         # cells below this go to review
+max_retries = 3
+
+[reconcile]
+qty_tolerance = 0.0           # absolute, in the base unit. 0 = must match exactly
+item_similarity = 0.85        # fuzzy match for item descriptions written differently
+working_days = [0, 1, 2, 3, 4, 5]   # Mon-Sat. Receipts dated Sunday are flagged
+lot_pattern = '^L\d{4}-\d{3}$'
+
+[schedule]
+# The scheduler reconciles the previous month once this day/time has passed (local time), then
+# again only if an input changes. A crashed run is retried on each check, up to max_attempts.
+day = 1
+time = "09:00"
+check_every_minutes = 15
+max_attempts = 3
+
+[notify]
+# Gmail SMTP with an app password; credentials are in .env.
+# WhatsApp adapters remain available; "console" prints for offline testing.
+channel = "email"
+
+# Units: every source spelling -> canonical unit, and canonical unit -> (dimension, factor to base).
+[units.aliases]
+pcs = "pcs"
+pc = "pcs"
+bag = "bag"
+bags = "bag"
+cone = "cone"
+cones = "cone"
+drum = "drum"
+drums = "drum"
+roll = "roll"
+rolls = "roll"
+ctn = "ctn"
+ctns = "ctn"
+bdl = "bdl"
+bdls = "bdl"
+m = "m"
+mtr = "m"
+yd = "yd"
+yds = "yd"
+
+[units.base]
+# Units in the same dimension are converted before comparing quantities.
+m = { dimension = "length", factor = 1.0 }
+yd = { dimension = "length", factor = 0.9144 }
+
+# Suppliers: ERP code is the master; every spelling seen in the register and the sheet maps to it.
+# An unknown spelling is never guessed: it goes to review.
+[suppliers]
+S-101 = ["QASR PACKAGING (PVT) LTD", "Qasr Packaging", "Qasr Pkg"]
+S-102 = ["TARAZ POLY INDUSTRIES", "Taraz Poly"]
+S-103 = ["ZARNAB CHEMICAL INDUSTRIES (PVT) LTD", "Zarnab Chemicals", "Zarnab Chem"]
+S-104 = ["REHBAR THREADS", "Rehbar Thread", "Rehbar Threads"]
+S-105 = ["SAAHIL PALLETS & TIMBER", "Saahil Pallets"]
+S-106 = ["NAYAB LABELS (PVT) LTD", "Nayab Labels"]
+S-107 = ["SHAHTOOT WEAVING MILLS", "Shahtoot", "Shahtoot Weaving"]

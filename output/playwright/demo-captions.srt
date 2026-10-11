@@ -1,0 +1,64 @@
+1
+00:00:01,034 --> 00:00:15,725
+Task 4: register reconciliation
+Replay using verified, real Gemini extraction results.
+
+2
+00:00:16,772 --> 00:00:33,117
+Supplied September inputs
+28 register rows, 28 ERP rows, 30 Excel rows.
+
+3
+00:00:34,099 --> 00:00:52,072
+Two independent model reads per page
+The blotted quantity remains null in both reads.
+
+4
+00:00:56,969 --> 00:01:12,668
+Actual pipeline replay
+Extraction, normalization, reconciliation, proof and reporting.
+
+5
+00:01:13,832 --> 00:01:29,970
+Completeness: all 86 source rows accounted for
+Counts and per-unit quantity totals tie.
+
+6
+00:01:31,352 --> 00:01:47,982
+Exceptions first, with source values
+Four mismatches, missing entries, a duplicate and a return.
+
+7
+00:01:50,657 --> 00:02:06,808
+Real review screen, isolated demo copy
+Only doubtful cells require a human decision.
+
+8
+00:02:10,968 --> 00:02:25,518
+GRN 4428 remains unresolved
+The ERP value is context, not an automatic correction.
+
+9
+00:02:31,332 --> 00:03:01,816
+Confirming the visible correction: 66
+This decision affects only the demo copy.
+
+10
+00:03:12,463 --> 00:03:26,624
+After rerun: one doubtful item remains
+The corrected quantity exposes the Excel mismatch.
+
+11
+00:03:35,307 --> 00:03:52,131
+Failure demonstration: missing ERP export
+The message clearly says NOT COMPLETE.
+
+12
+00:03:53,099 --> 00:04:08,837
+Real email delivery verified in the inbox
+Repeating the same result skipped duplicate delivery.
+
+13
+00:04:09,729 --> 00:04:27,495
+Validation: 27 tests passed, 92% coverage
+Further review validation and extraction omission checks remain.

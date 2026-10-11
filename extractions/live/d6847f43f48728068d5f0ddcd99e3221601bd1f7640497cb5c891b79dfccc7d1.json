@@ -1,0 +1,1506 @@
+{
+  "image": "page1.jpg",
+  "sha256": "d6847f43f48728068d5f0ddcd99e3221601bd1f7640497cb5c891b79dfccc7d1",
+  "extractor": "gemini:gemini-2.5-flash",
+  "extracted_at": "2026-10-15T08:30:00+05:00",
+  "passes": [
+    {
+      "month_label": "Sep 2026",
+      "page_no": "1",
+      "rows": [
+        {
+          "row_index": 1,
+          "y_top": 0.16,
+          "y_bottom": 0.21,
+          "date": {
+            "value": "01/09",
+            "raw_text": "01/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4401",
+            "raw_text": "4401",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Qasr Pkg",
+            "raw_text": "Qasr Pkg",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Cartons 5-ply",
+            "raw_text": "Cartons 5-ply",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-001",
+            "raw_text": "L2609-001",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "2000",
+            "raw_text": "2000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 2,
+          "y_top": 0.21,
+          "y_bottom": 0.26,
+          "date": {
+            "value": "01/09",
+            "raw_text": "01/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4402",
+            "raw_text": "4402",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Taraz Poly",
+            "raw_text": "Taraz Poly",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Polybags 12x16",
+            "raw_text": "Polybags 12x16",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-002",
+            "raw_text": "L2609-002",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "25000",
+            "raw_text": "25000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 3,
+          "y_top": 0.26,
+          "y_bottom": 0.31,
+          "date": {
+            "value": "02/09",
+            "raw_text": "02/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4403",
+            "raw_text": "4403",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Zarnab Chem",
+            "raw_text": "Zarnab Chem",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Caustic soda flakes",
+            "raw_text": "Caustic soda flakes",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-003",
+            "raw_text": "L2609-003",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "50",
+            "raw_text": "50",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "bags",
+            "raw_text": "bags",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 4,
+          "y_top": 0.31,
+          "y_bottom": 0.36,
+          "date": {
+            "value": "03/09",
+            "raw_text": "03/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4404",
+            "raw_text": "4404",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Rehbar Threads",
+            "raw_text": "Rehbar Threads",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Thread cones 40/2",
+            "raw_text": "Thread cones 40/2",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-004",
+            "raw_text": "L2609-004",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "600",
+            "raw_text": "600",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "cones",
+            "raw_text": "cones",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 5,
+          "y_top": 0.36,
+          "y_bottom": 0.41,
+          "date": {
+            "value": "04/09",
+            "raw_text": "04/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4405",
+            "raw_text": "4405",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Saahil Pallets",
+            "raw_text": "Saahil Pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Wooden pallets",
+            "raw_text": "Wooden pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-005",
+            "raw_text": "L2609-005",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "120",
+            "raw_text": "120",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 6,
+          "y_top": 0.41,
+          "y_bottom": 0.46,
+          "date": {
+            "value": "05/09",
+            "raw_text": "05/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4406",
+            "raw_text": "4406",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Nayab Labels",
+            "raw_text": "Nayab Labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Woven labels",
+            "raw_text": "Woven labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-006",
+            "raw_text": "L2609-006",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "10000",
+            "raw_text": "10000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 7,
+          "y_top": 0.46,
+          "y_bottom": 0.51,
+          "date": {
+            "value": "07/09",
+            "raw_text": "07/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4407",
+            "raw_text": "4407",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Qasr Pkg",
+            "raw_text": "Qasr Pkg",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Cartons 3-ply",
+            "raw_text": "Cartons 3-ply",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-007",
+            "raw_text": "L2609-007",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "1500",
+            "raw_text": "1500",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 8,
+          "y_top": 0.51,
+          "y_bottom": 0.56,
+          "date": {
+            "value": "07/09",
+            "raw_text": "07/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4408",
+            "raw_text": "4408",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Zarnab Chem",
+            "raw_text": "Zarnab Chem",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "H202 50%",
+            "raw_text": "H202 50%",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-008",
+            "raw_text": "L2609-008",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "40",
+            "raw_text": "40",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "drums",
+            "raw_text": "drums",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 9,
+          "y_top": 0.56,
+          "y_bottom": 0.61,
+          "date": {
+            "value": "08/09",
+            "raw_text": "08/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4409",
+            "raw_text": "4409",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Taraz Poly",
+            "raw_text": "Taraz Poly",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Stretch film",
+            "raw_text": "Stretch film",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-009",
+            "raw_text": "L2609-009",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "80",
+            "raw_text": "80",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "rolls",
+            "raw_text": "rolls",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 10,
+          "y_top": 0.61,
+          "y_bottom": 0.66,
+          "date": {
+            "value": "09/09",
+            "raw_text": "09/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4410",
+            "raw_text": "4410",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Rehbar Threads",
+            "raw_text": "Rehbar Threads",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Thread cones 20/2",
+            "raw_text": "Thread cones 20/2",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-010",
+            "raw_text": "L2609-010",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "450",
+            "raw_text": "450",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "cones",
+            "raw_text": "cones",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 11,
+          "y_top": 0.66,
+          "y_bottom": 0.71,
+          "date": {
+            "value": "10/09",
+            "raw_text": "10/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4411",
+            "raw_text": "4411",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Qasr Pkg",
+            "raw_text": "Qasr Pkg",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Cartons 5-ply",
+            "raw_text": "Cartons 5-ply",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-011",
+            "raw_text": "L2609-011",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "1800",
+            "raw_text": "1800",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 12,
+          "y_top": 0.71,
+          "y_bottom": 0.76,
+          "date": {
+            "value": "11/09",
+            "raw_text": "11/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4412",
+            "raw_text": "4412",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Saahil Pallets",
+            "raw_text": "Saahil Pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Wooden pallets",
+            "raw_text": "Wooden pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-012",
+            "raw_text": "L2609-012",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "90",
+            "raw_text": "90",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 13,
+          "y_top": 0.76,
+          "y_bottom": 0.81,
+          "date": {
+            "value": "11/09",
+            "raw_text": "11/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4413",
+            "raw_text": "4413",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Nayab Labels",
+            "raw_text": "Nayab Labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Care labels",
+            "raw_text": "Care labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-013",
+            "raw_text": "L2609-013",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "15000",
+            "raw_text": "15000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 14,
+          "y_top": 0.81,
+          "y_bottom": 0.86,
+          "date": {
+            "value": "12/09",
+            "raw_text": "12/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4414",
+            "raw_text": "4414",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Zarnab Chem",
+            "raw_text": "Zarnab Chem",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Soda ash",
+            "raw_text": "Soda ash",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-014",
+            "raw_text": "L2609-014",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "30",
+            "raw_text": "30",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "bags",
+            "raw_text": "bags",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        }
+      ],
+      "blank_rows": 3
+    },
+    {
+      "month_label": "Sep 2026",
+      "page_no": "1",
+      "rows": [
+        {
+          "row_index": 1,
+          "y_top": 0.16,
+          "y_bottom": 0.21,
+          "date": {
+            "value": "01/09",
+            "raw_text": "01/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4401",
+            "raw_text": "4401",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Qasr Pkg",
+            "raw_text": "Qasr Pkg",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Cartons 5-ply",
+            "raw_text": "Cartons 5-ply",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-001",
+            "raw_text": "L2609-001",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "2000",
+            "raw_text": "2000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 2,
+          "y_top": 0.21,
+          "y_bottom": 0.26,
+          "date": {
+            "value": "01/09",
+            "raw_text": "01/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4402",
+            "raw_text": "4402",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Taraz Poly",
+            "raw_text": "Taraz Poly",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Polybags 12x16",
+            "raw_text": "Polybags 12x16",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-002",
+            "raw_text": "L2609-002",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "25000",
+            "raw_text": "25000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 3,
+          "y_top": 0.26,
+          "y_bottom": 0.31,
+          "date": {
+            "value": "02/09",
+            "raw_text": "02/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4403",
+            "raw_text": "4403",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Zarnab Chem",
+            "raw_text": "Zarnab Chem",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Caustic soda flakes",
+            "raw_text": "Caustic soda flakes",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-003",
+            "raw_text": "L2609-003",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "50",
+            "raw_text": "50",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "bags",
+            "raw_text": "bags",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 4,
+          "y_top": 0.31,
+          "y_bottom": 0.36,
+          "date": {
+            "value": "03/09",
+            "raw_text": "03/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4404",
+            "raw_text": "4404",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Rehbar Threads",
+            "raw_text": "Rehbar Threads",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Thread cones 40/2",
+            "raw_text": "Thread cones 40/2",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-004",
+            "raw_text": "L2609-004",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "600",
+            "raw_text": "600",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "cones",
+            "raw_text": "cones",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 5,
+          "y_top": 0.36,
+          "y_bottom": 0.41,
+          "date": {
+            "value": "04/09",
+            "raw_text": "04/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4405",
+            "raw_text": "4405",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Saahil Pallets",
+            "raw_text": "Saahil Pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Wooden pallets",
+            "raw_text": "Wooden pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-005",
+            "raw_text": "L2609-005",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "120",
+            "raw_text": "120",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 6,
+          "y_top": 0.41,
+          "y_bottom": 0.46,
+          "date": {
+            "value": "05/09",
+            "raw_text": "05/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4406",
+            "raw_text": "4406",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Nayab Labels",
+            "raw_text": "Nayab Labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Woven labels",
+            "raw_text": "Woven labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-006",
+            "raw_text": "L2609-006",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "10000",
+            "raw_text": "10000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 7,
+          "y_top": 0.46,
+          "y_bottom": 0.51,
+          "date": {
+            "value": "07/09",
+            "raw_text": "07/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4407",
+            "raw_text": "4407",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Qasr Pkg",
+            "raw_text": "Qasr Pkg",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Cartons 3-ply",
+            "raw_text": "Cartons 3-ply",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-007",
+            "raw_text": "L2609-007",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "1500",
+            "raw_text": "1500",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 8,
+          "y_top": 0.51,
+          "y_bottom": 0.56,
+          "date": {
+            "value": "07/09",
+            "raw_text": "07/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4408",
+            "raw_text": "4408",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Zarnab Chem",
+            "raw_text": "Zarnab Chem",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "H202 50%",
+            "raw_text": "H202 50%",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-008",
+            "raw_text": "L2609-008",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "40",
+            "raw_text": "40",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "drums",
+            "raw_text": "drums",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 9,
+          "y_top": 0.56,
+          "y_bottom": 0.61,
+          "date": {
+            "value": "08/09",
+            "raw_text": "08/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4409",
+            "raw_text": "4409",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Taraz Poly",
+            "raw_text": "Taraz Poly",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Stretch film",
+            "raw_text": "Stretch film",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-009",
+            "raw_text": "L2609-009",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "80",
+            "raw_text": "80",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "rolls",
+            "raw_text": "rolls",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 10,
+          "y_top": 0.61,
+          "y_bottom": 0.66,
+          "date": {
+            "value": "09/09",
+            "raw_text": "09/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4410",
+            "raw_text": "4410",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Rehbar Threads",
+            "raw_text": "Rehbar Threads",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Thread cones 20/2",
+            "raw_text": "Thread cones 20/2",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-010",
+            "raw_text": "L2609-010",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "450",
+            "raw_text": "450",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "cones",
+            "raw_text": "cones",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 11,
+          "y_top": 0.66,
+          "y_bottom": 0.71,
+          "date": {
+            "value": "10/09",
+            "raw_text": "10/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4411",
+            "raw_text": "4411",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Qasr Pkg",
+            "raw_text": "Qasr Pkg",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Cartons 5-ply",
+            "raw_text": "Cartons 5-ply",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-011",
+            "raw_text": "L2609-011",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "1800",
+            "raw_text": "1800",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 12,
+          "y_top": 0.71,
+          "y_bottom": 0.76,
+          "date": {
+            "value": "11/09",
+            "raw_text": "11/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4412",
+            "raw_text": "4412",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Saahil Pallets",
+            "raw_text": "Saahil Pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Wooden pallets",
+            "raw_text": "Wooden pallets",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-012",
+            "raw_text": "L2609-012",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "90",
+            "raw_text": "90",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 13,
+          "y_top": 0.76,
+          "y_bottom": 0.81,
+          "date": {
+            "value": "11/09",
+            "raw_text": "11/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4413",
+            "raw_text": "4413",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Nayab Labels",
+            "raw_text": "Nayab Labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Care labels",
+            "raw_text": "Care labels",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-013",
+            "raw_text": "L2609-013",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "15000",
+            "raw_text": "15000",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "pcs",
+            "raw_text": "pcs",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "B.H.",
+            "raw_text": "B.H.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        },
+        {
+          "row_index": 14,
+          "y_top": 0.81,
+          "y_bottom": 0.86,
+          "date": {
+            "value": "12/09",
+            "raw_text": "12/09",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "grn": {
+            "value": "4414",
+            "raw_text": "4414",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "supplier": {
+            "value": "Zarnab Chem",
+            "raw_text": "Zarnab Chem",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "item": {
+            "value": "Soda ash",
+            "raw_text": "Soda ash",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "lot": {
+            "value": "L2609-014",
+            "raw_text": "L2609-014",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "qty": {
+            "value": "30",
+            "raw_text": "30",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "unit": {
+            "value": "bags",
+            "raw_text": "bags",
+            "confidence": 1.0,
+            "flags": []
+          },
+          "recd_by": {
+            "value": "S.A.",
+            "raw_text": "S.A.",
+            "confidence": 1.0,
+            "flags": []
+          }
+        }
+      ],
+      "blank_rows": 3
+    }
+  ]
+}
