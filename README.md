@@ -57,7 +57,7 @@ docker compose --profile quality run --rm test
 docker compose --profile quality run --rm lint
 ```
 
-[YouTube demo: 4:45](https://youtu.be/_LO8tD0izJI) | [Download](output/playwright/Kestrel-Task4-Demo.mp4) | [Transcript](output/playwright/demo-transcript.md) | [Captions](output/playwright/demo-captions.srt).
+[YouTube demo: 4:45](https://youtu.be/_LO8tD0izJI) | [Transcript](output/playwright/demo-transcript.md) | [Captions](output/playwright/demo-captions.srt).
 
 As an extra challenge, I wanted to develop a tool that could record the demo for me, so I built a Playwright-based recording workflow with local narration and captions. The demo replays genuine cached Gemini results, shows review and missing-export recovery in an isolated copy, and includes verified email-delivery evidence. The video predates the quantity-validation and incomplete-status fixes; both fixes are included in the current code and regression tests.
 

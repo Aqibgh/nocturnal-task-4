@@ -13,6 +13,5 @@ state/
 !state/.gitkeep
 !out/.gitkeep
 output/playwright/*
-!output/playwright/Kestrel-Task4-Demo.mp4
 !output/playwright/demo-transcript.md
 !output/playwright/demo-captions.srt

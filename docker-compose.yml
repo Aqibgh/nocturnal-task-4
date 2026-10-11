@@ -59,47 +59,8 @@ services:
     <<: *dev
     command:
       - >-
-        ruff check --output-format json --exit-zero -o out/quality/ruff.json src tests &&
         ruff check src tests && ruff format --check src tests && mypy
 
   format:
     <<: *dev
     command: ["ruff check --fix --exit-zero src tests; ruff format src tests"]
-
-  prettier:
-    image: node:20-alpine
-    working_dir: /work
-    volumes:
-      - .:/work
-    entrypoint: ["npx", "--yes", "prettier@3.3.3"]
-    command: ["--check", "."]
-    profiles: ["quality"]
-
-  sonarqube:
-    image: sonarqube:community
-    ports:
-      - "127.0.0.1:9000:9000"
-    environment:
-      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
-    volumes:
-      - sonar_data:/opt/sonarqube/data
-    healthcheck:
-      test: ["CMD-SHELL", "curl -fs http://localhost:9000/api/system/status | grep -q UP"]
-      interval: 10s
-      retries: 30
-    profiles: ["quality"]
-
-  sonar-scanner:
-    image: sonarsource/sonar-scanner-cli:latest
-    environment:
-      SONAR_HOST_URL: http://sonarqube:9000
-      SONAR_TOKEN: ${SONAR_TOKEN:-}
-    volumes:
-      - .:/usr/src
-    depends_on:
-      sonarqube:
-        condition: service_healthy
-    profiles: ["quality"]
-
-volumes:
-  sonar_data:
