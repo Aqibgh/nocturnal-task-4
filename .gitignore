@@ -12,6 +12,4 @@ out/
 state/
 !state/.gitkeep
 !out/.gitkeep
-output/playwright/*
-!output/playwright/demo-transcript.md
-!output/playwright/demo-captions.srt
+output/
